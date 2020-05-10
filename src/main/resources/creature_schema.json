@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "creature_schema.json",
+  "title": "Creature Schema",
+
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {"type": "string", "minLength": 1},
+      "race": {"type": "string", "minLength": 1},
+      "floor": {"type": "string", "minLength": 1},
+      "drop": {"type": "string", "minLength": 1},
+      "spawn_order": {"type": "number"},
+      "spawn_timer": {"type": "number"},
+      "health": {"type": "number"},
+      "juice": {"type": "string", "minLength": 1},
+      "levels": {
+        "type": "array",
+        "items": {
+          "properties": {
+            "level": {"type": "number"},
+            "juice_amount": {"type": "number"},
+            "drop_amount": {"type": "number"},
+            "damage": {"type": "number"},
+            "dark_energy": {"type": "number"}
+          },
+          "required": ["level", "juice_amount", "drop_amount", "damage", "dark_energy"],
+          "additionalProperties": false
+        }
+      },
+      "skins": {
+        "type": "array",
+        "items": {
+          "properties": {
+            "name": {"type": "string", "minLength": 1},
+            "levels": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "level": {"type": "number"},
+                  "drop_bonus": {"type": "number"},
+                  "damage_bonus": {"type": "number"},
+                  "dark_energy_bonus": {"type": "number"}
+                }
+              }
+            }
+          },
+          "required": ["name", "levels"],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": ["name", "race", "floor", "drop", "spawn_order", "spawn_timer"],
+    "additionalProperties": false
+  }
+}

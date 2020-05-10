@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Gremlin",
+    "race": "Goblin",
+    "floor": "Mud Farm",
+    "drop": "Slime",
+    "spawn_order": 1,
+    "spawn_timer": 5,
+    "health": 3,
+    "levels": [
+      {
+        "level": 1,
+        "juice_amount": 4,
+        "drop_amount": 1,
+        "damage": 10,
+        "dark_energy": 10
+      },
+      {
+        "level": 2,
+        "juice_amount": 5,
+        "drop_amount": 2,
+        "damage": 25,
+        "dark_energy": 25
+      },
+      {
+        "level": 3,
+        "juice_amount": 6,
+        "drop_amount": 3,
+        "damage": 50,
+        "dark_energy": 50
+      },
+      {
+        "level": 4,
+        "juice_amount": 7,
+        "drop_amount": 4,
+        "damage": 75,
+        "dark_energy": 75
+      }
+    ],
+    "skins": [
+      {
+        "name": "default",
+        "levels": [
+          {
+            "level": 1,
+            "drop_bonus": 0,
+            "damage_bonus": 0,
+            "dark_energy_bonus": 0
+          },
+          {
+            "level": 2,
+            "drop_bonus": 0,
+            "damage_bonus": 100,
+            "dark_energy_bonus": 0
+          },
+          {
+            "level": 3,
+            "drop_bonus": 0,
+            "damage_bonus": 100,
+            "dark_energy_bonus": 100
+          }
+        ]
+      },
+      {
+        "name": "Teddy Bear",
+        "levels": [
+          {
+            "level": 1,
+            "drop_bonus": 1,
+            "damage_bonus": 0,
+            "dark_energy_bonus": 0
+          },
+          {
+            "level": 2,
+            "drop_bonus": 1,
+            "damage_bonus": 0,
+            "dark_energy_bonus": 150
+          },
+          {
+            "level": 3,
+            "drop_bonus": 1,
+            "damage_bonus": 150,
+            "dark_energy_bonus": 150
+          },
+          {
+            "level": 4,
+            "drop_bonus": 1,
+            "damage_bonus": 150,
+            "dark_energy_bonus": 300
+          }
+        ]
+      },
+      {
+        "name": "Leprechaun",
+        "levels": [
+          {
+            "level": 1,
+            "drop_bonus": 0,
+            "damage_bonus": 200,
+            "dark_energy_bonus": 0
+          },
+          {
+            "level": 2,
+            "drop_bonus": 0,
+            "damage_bonus": 200,
+            "dark_energy_bonus": 200
+          },
+          {
+            "level": 3,
+            "drop_bonus": 1,
+            "damage_bonus": 200,
+            "dark_energy_bonus": 200
+          },
+          {
+            "level": 4,
+            "drop_bonus": 1,
+            "damage_bonus": 400,
+            "dark_energy_bonus": 200
+          },
+          {
+            "level": 5,
+            "drop_bonus": 1,
+            "damage_bonus": 400,
+            "dark_energy_bonus": 400
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Orc Mage",
+    "race": "Goblin",
+    "floor": "Mud Farm",
+    "drop": "Cracked Orb",
+    "spawn_order": 3,
+    "spawn_timer": 12,
+    "health": 5,
+    "levels": [],
+    "skins": []
+  },
+  {
+    "name": "Ogre",
+    "race": "Goblin",
+    "floor": "Mud Farm",
+    "drop": "Ogre Hair",
+    "spawn_order": 7,
+    "spawn_timer": 60,
+    "health": 8,
+    "levels": [],
+    "skins": []
+  }
+]
