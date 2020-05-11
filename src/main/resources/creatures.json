@@ -3,10 +3,10 @@
     "name": "Gremlin",
     "race": "Goblin",
     "floor": "Mud Farm",
-    "drop_type": "Slime",
-    "juice_type": "Ooze",
-    "spawn_order": 1,
-    "spawn_timer": 5,
+    "dropType": "Slime",
+    "juiceType": "Ooze",
+    "spawnOrder": 1,
+    "spawnTimer": 5,
     "health": 3,
     "levels": [
       {
@@ -14,28 +14,28 @@
         "drop": 1,
         "juice": 4,
         "damage": 10,
-        "dark_energy": 10
+        "darkEnergy": 10
       },
       {
         "level": 2,
         "drop": 2,
         "juice": 5,
         "damage": 25,
-        "dark_energy": 25
+        "darkEnergy": 25
       },
       {
         "level": 3,
         "drop": 3,
         "juice": 6,
         "damage": 50,
-        "dark_energy": 50
+        "darkEnergy": 50
       },
       {
         "level": 4,
         "drop": 4,
         "juice": 7,
         "damage": 75,
-        "dark_energy": 75
+        "darkEnergy": 75
       }
     ],
     "skins": [
@@ -44,21 +44,21 @@
         "levels": [
           {
             "level": 1,
-            "drop_bonus": 0,
-            "damage_bonus": 0,
-            "dark_energy_bonus": 0
+            "dropBonus": 0,
+            "damageBonus": 0,
+            "darkEnergyBonus": 0
           },
           {
             "level": 2,
-            "drop_bonus": 0,
-            "damage_bonus": 100,
-            "dark_energy_bonus": 0
+            "dropBonus": 0,
+            "damageBonus": 100,
+            "darkEnergyBonus": 0
           },
           {
             "level": 3,
-            "drop_bonus": 0,
-            "damage_bonus": 100,
-            "dark_energy_bonus": 100
+            "dropBonus": 0,
+            "damageBonus": 100,
+            "darkEnergyBonus": 100
           }
         ]
       },
@@ -67,27 +67,27 @@
         "levels": [
           {
             "level": 1,
-            "drop_bonus": 1,
-            "damage_bonus": 0,
-            "dark_energy_bonus": 0
+            "dropBonus": 1,
+            "damageBonus": 0,
+            "darkEnergyBonus": 0
           },
           {
             "level": 2,
-            "drop_bonus": 1,
-            "damage_bonus": 0,
-            "dark_energy_bonus": 150
+            "dropBonus": 1,
+            "damageBonus": 0,
+            "darkEnergyBonus": 150
           },
           {
             "level": 3,
-            "drop_bonus": 1,
-            "damage_bonus": 150,
-            "dark_energy_bonus": 150
+            "dropBonus": 1,
+            "damageBonus": 150,
+            "darkEnergyBonus": 150
           },
           {
             "level": 4,
-            "drop_bonus": 1,
-            "damage_bonus": 150,
-            "dark_energy_bonus": 300
+            "dropBonus": 1,
+            "damageBonus": 150,
+            "darkEnergyBonus": 300
           }
         ]
       },
@@ -96,33 +96,33 @@
         "levels": [
           {
             "level": 1,
-            "drop_bonus": 0,
-            "damage_bonus": 200,
-            "dark_energy_bonus": 0
+            "dropBonus": 0,
+            "damageBonus": 200,
+            "darkEnergyBonus": 0
           },
           {
             "level": 2,
-            "drop_bonus": 0,
-            "damage_bonus": 200,
-            "dark_energy_bonus": 200
+            "dropBonus": 0,
+            "damageBonus": 200,
+            "darkEnergyBonus": 200
           },
           {
             "level": 3,
-            "drop_bonus": 1,
-            "damage_bonus": 200,
-            "dark_energy_bonus": 200
+            "dropBonus": 1,
+            "damageBonus": 200,
+            "darkEnergyBonus": 200
           },
           {
             "level": 4,
-            "drop_bonus": 1,
-            "damage_bonus": 400,
-            "dark_energy_bonus": 200
+            "dropBonus": 1,
+            "damageBonus": 400,
+            "darkEnergyBonus": 200
           },
           {
             "level": 5,
-            "drop_bonus": 1,
-            "damage_bonus": 400,
-            "dark_energy_bonus": 400
+            "dropBonus": 1,
+            "damageBonus": 400,
+            "darkEnergyBonus": 400
           }
         ]
       }
@@ -132,9 +132,9 @@
     "name": "Orc Mage",
     "race": "Goblin",
     "floor": "Mud Farm",
-    "drop_type": "Cracked Orb",
-    "spawn_order": 3,
-    "spawn_timer": 12,
+    "dropType": "Cracked Orb",
+    "spawnOrder": 3,
+    "spawnTimer": 12,
     "health": 5,
     "levels": [],
     "skins": []
@@ -143,9 +143,9 @@
     "name": "Ogre",
     "race": "Goblin",
     "floor": "Mud Farm",
-    "drop_type": "Ogre Hair",
-    "spawn_order": 7,
-    "spawn_timer": 60,
+    "dropType": "Ogre Hair",
+    "spawnOrder": 7,
+    "spawnTimer": 60,
     "health": 8,
     "levels": [],
     "skins": []

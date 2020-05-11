@@ -1,4 +1,3 @@
-import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
@@ -6,20 +5,21 @@ class Creature(
     val name: String,
     val race: String = "",
     val floor: String,
-    @Json(name = "drop_type") val dropType: String,
-    @Json(name = "juice_type") val juiceType: String?,
-    @Json(name = "spawn_order") val spawnOrder: Int,
-    @Json(name = "spawn_timer") val spawnTimer: Int,
+    val dropType: String,
+    val juiceType: String?,
+    val spawnOrder: Int,
+    val spawnTimer: Int,
     val health: Int,
     var level: Int = 1,
     val levels: List<CreatureLevel>,
     val skins: List<Skin>
 ) {
     var adBonus: AdBonus = AdBonus()
+    var storeBoost: StoreBoost = StoreBoost()
     val drop: Int
         get() = this.levels[this.level - 1].drop + this.adBonus.creatureDropBonus
     val juice: Int
-        get() = this.levels[this.level - 1].juice
+        get() = this.levels[this.level - 1].juice + this.adBonus.creatureDropBonus + this.storeBoost.bountyBoost
     val damage: Float
         get() = this.levels[this.level - 1].damage
     val darkEnergy: Float
@@ -32,7 +32,7 @@ data class CreatureLevel(
     val juice: Int,
     val drop: Int,
     val damage: Float,
-    @Json(name = "dark_energy") val darkEnergy: Float
+    val darkEnergy: Float
 )
 
 @JsonClass(generateAdapter = true)
@@ -44,8 +44,7 @@ data class Skin(
 @JsonClass(generateAdapter = true)
 data class SkinLevel(
     val level: Int,
-    @Json(name = "drop_bonus") val dropBonus: Int,
-    @Json(name = "damage_bonus") val damageBonus: Int,
-    @Json(name = "dark_energy_bonus") val darkEnergyBonus: Int
+    val dropBonus: Int,
+    val damageBonus: Int,
+    val darkEnergyBonus: Int
 )
-

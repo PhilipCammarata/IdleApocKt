@@ -10,10 +10,10 @@
       "name": {"type": "string", "minLength": 1},
       "race": {"type": "string", "minLength": 1},
       "floor": {"type": "string", "minLength": 1},
-      "drop_type": {"type": "string", "minLength": 1},
-      "juice_type": {"type": "string", "minLength": 1},
-      "spawn_order": {"type": "number"},
-      "spawn_timer": {"type": "number"},
+      "dropType": {"type": "string", "minLength": 1},
+      "juiceType": {"type": "string", "minLength": 1},
+      "spawnOrder": {"type": "number"},
+      "spawnTimer": {"type": "number"},
       "health": {"type": "number"},
       "levels": {
         "type": "array",
@@ -23,7 +23,7 @@
             "juice": {"type": "number"},
             "drop": {"type": "number"},
             "damage": {"type": "number"},
-            "dark_energy": {"type": "number"}
+            "darkEnergy": {"type": "number"}
           },
           "additionalProperties": false
         }
