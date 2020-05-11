@@ -6,17 +6,33 @@ class Creature(
     val name: String,
     val race: String = "",
     val floor: String,
-    val drop: String,
+    @Json(name = "drop_type") val dropType: String,
+    @Json(name = "juice_type") val juiceType: String?,
     @Json(name = "spawn_order") val spawnOrder: Int,
     @Json(name = "spawn_timer") val spawnTimer: Int,
     val health: Int,
-    val levels: List<Map<String, Int>>,
+    var level: Int = 1,
+    val levels: List<CreatureLevel>,
     val skins: List<Skin>
 ) {
-    var darkEnergy: Float = 0.0f
-        get() = 2f + field
-    var level: Int = 1
+    val drop: Int
+        get() = this.levels[this.level - 1].drop
+    val juice: Int
+        get() = this.levels[this.level - 1].juice
+    val damage: Float
+        get() = this.levels[this.level - 1].damage
+    val darkEnergy: Float
+        get() = this.levels[this.level - 1].darkEnergy
 }
+
+@JsonClass(generateAdapter = true)
+data class CreatureLevel(
+    val level: Int,
+    val juice: Int,
+    val drop: Int,
+    val damage: Float,
+    @Json(name = "dark_energy") val darkEnergy: Float
+)
 
 @JsonClass(generateAdapter = true)
 data class Skin(
@@ -31,3 +47,4 @@ data class SkinLevel(
     @Json(name = "damage_bonus") val damageBonus: Int,
     @Json(name = "dark_energy_bonus") val darkEnergyBonus: Int
 )
+

@@ -10,22 +10,21 @@
       "name": {"type": "string", "minLength": 1},
       "race": {"type": "string", "minLength": 1},
       "floor": {"type": "string", "minLength": 1},
-      "drop": {"type": "string", "minLength": 1},
+      "drop_type": {"type": "string", "minLength": 1},
+      "juice_type": {"type": "string", "minLength": 1},
       "spawn_order": {"type": "number"},
       "spawn_timer": {"type": "number"},
       "health": {"type": "number"},
-      "juice": {"type": "string", "minLength": 1},
       "levels": {
         "type": "array",
         "items": {
           "properties": {
             "level": {"type": "number"},
-            "juice_amount": {"type": "number"},
-            "drop_amount": {"type": "number"},
+            "juice": {"type": "number"},
+            "drop": {"type": "number"},
             "damage": {"type": "number"},
             "dark_energy": {"type": "number"}
           },
-          "required": ["level", "juice_amount", "drop_amount", "damage", "dark_energy"],
           "additionalProperties": false
         }
       },
@@ -46,12 +45,10 @@
               }
             }
           },
-          "required": ["name", "levels"],
           "additionalProperties": false
         }
       }
     },
-    "required": ["name", "race", "floor", "drop", "spawn_order", "spawn_timer"],
     "additionalProperties": false
   }
 }

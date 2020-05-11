@@ -3,11 +3,12 @@
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
       <map>
-        <entry key="Creature Schema">
+        <entry key="creature schema">
           <value>
             <SchemaInfo>
-              <option name="name" value="Creature Schema" />
+              <option name="name" value="creature schema" />
               <option name="relativePathToSchema" value="build/resources/main/creature_schema.json" />
+              <option name="schemaVersion" value="JSON Schema version 7" />
               <option name="patterns">
                 <list>
                   <Item>
