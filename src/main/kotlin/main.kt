@@ -10,5 +10,8 @@ fun main() {
     val creatureJson = File("src/main/resources/creatures.json").readText()
     val creatures: List<Creature> = adapter.fromJson(creatureJson) ?: return
 
-    println(adapter.toJson(creatures))
+    val gremlin = creatures.single { it.name == "Gremlin" }
+    println(gremlin.skins[0].levels[2].darkEnergyBonus)
+    gremlin.level = 2
+    println(gremlin.darkEnergy)
 }
