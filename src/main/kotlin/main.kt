@@ -13,9 +13,6 @@ fun main() {
     val gremlin = creatures.single { it.name == "Gremlin" }
     val adBonus = AdBonus(creatureDrop = true, creatureDamage = true, creatureDarkEnergy = true)
     val storeBoost = StoreBoost(doubleDarkness = true, bounty = true)
-    gremlin.adBonus = adBonus
-    gremlin.storeBoost = storeBoost
 
-    gremlin.level = 4
-    println(gremlin.juice)
+    TODO("Work on skins")
 }

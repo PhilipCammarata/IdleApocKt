@@ -7,9 +7,9 @@ class AdBonus(
     var creatureDarkEnergy: Boolean = false
 ) {
     val creatureDropBonus: Int
-        get() = if (this.creatureDrop) 1 else 0
+        get() = if (creatureDrop) 1 else 0
     val creatureDamageBonus: Float
-        get() = if (this.creatureDamage) 100.0f else 0f
+        get() = if (creatureDamage) 100.0f else 0f
     val creatureDarkEnergyBonus: Float
-        get() = if (this.creatureDarkEnergy) 100.0f else 0f
+        get() = if (creatureDarkEnergy) 100.0f else 0f
 }
