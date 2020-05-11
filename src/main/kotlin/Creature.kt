@@ -15,8 +15,9 @@ class Creature(
     val levels: List<CreatureLevel>,
     val skins: List<Skin>
 ) {
+    var adBonus: AdBonus = AdBonus()
     val drop: Int
-        get() = this.levels[this.level - 1].drop
+        get() = this.levels[this.level - 1].drop + this.adBonus.creatureDropBonus
     val juice: Int
         get() = this.levels[this.level - 1].juice
     val damage: Float
