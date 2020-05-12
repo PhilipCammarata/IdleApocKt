@@ -27,11 +27,11 @@ class Creature(
 
 
     fun calculateDrop(): Int {
-        return levels[level - 1].drop + adBonus.creatureDropBonus
+        return levels[level - 1].drop + adBonus.dropBonus
     }
 
     fun calculateJuice(): Int {
-        return levels[level - 1].juice + adBonus.creatureDropBonus + storeBoost.bountyBoost
+        return levels[level - 1].juice + adBonus.dropBonus + storeBoost.bountyBoost
     }
 
     fun calculateDamage(): Float {

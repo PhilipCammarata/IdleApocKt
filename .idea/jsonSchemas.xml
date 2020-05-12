@@ -7,7 +7,7 @@
           <value>
             <SchemaInfo>
               <option name="name" value="creature schema" />
-              <option name="relativePathToSchema" value="build/resources/main/creature_schema.json" />
+              <option name="relativePathToSchema" value="src/main/resources/creature_schema.json" />
               <option name="schemaVersion" value="JSON Schema version 7" />
               <option name="patterns">
                 <list>

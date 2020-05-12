@@ -14,5 +14,5 @@ fun main() {
     val adBonus = AdBonus(creatureDrop = true, creatureDamage = true, creatureDarkEnergy = true)
     val storeBoost = StoreBoost(doubleDarkness = true, bounty = true)
 
-    TODO("Work on skins")
+    println(gremlin.skins[1].levels[2])
 }
