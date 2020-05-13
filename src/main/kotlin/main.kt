@@ -11,8 +11,7 @@ fun main() {
     val creatures: List<Creature> = adapter.fromJson(creatureJson) ?: return
 
     val gremlin = creatures.single { it.name == "Gremlin" }
+    val gremlinSkins = gremlin.skins
     val adBonus = AdBonus(creatureDrop = true, creatureDamage = true, creatureDarkEnergy = true)
     val storeBoost = StoreBoost(doubleDarkness = true, bounty = true)
-
-    println(gremlin.skins[1].levels[2])
 }
