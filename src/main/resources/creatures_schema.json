@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "creature_schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Creature Schema",
 
   "type": "array",
@@ -24,31 +24,18 @@
             "drop": {"type": "number"},
             "damage": {"type": "number"},
             "darkEnergy": {"type": "number"}
-          },
-          "additionalProperties": false
+          }
         }
       },
       "skins": {
         "type": "array",
         "items": {
           "properties": {
-            "name": {"type": "string", "minLength": 1},
-            "levels": {
-              "type": "array",
-              "items": {
-                "properties": {
-                  "level": {"type": "number"},
-                  "dropBonus": {"type": "number"},
-                  "damageBonus": {"type": "number"},
-                  "darkEnergyBonus": {"type": "number"}
-                }
-              }
-            }
-          },
-          "additionalProperties": false
+            "name": {"type": "string"},
+            "quality": {"type": "string", "enum": ["Default", "Rare", "Legendary"]}
+          }
         }
       }
-    },
-    "additionalProperties": false
+    }
   }
 }

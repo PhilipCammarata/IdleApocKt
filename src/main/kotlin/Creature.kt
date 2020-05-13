@@ -1,12 +1,12 @@
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.Serializable
 
-@JsonClass(generateAdapter = true)
+@Serializable
 class Creature(
         val name: String,
-        val race: String = "",
+        val race: String,
         val floor: String,
         val dropType: String,
-        val juiceType: String?,
+        val juiceType: String? = null,
         val spawnOrder: Int,
         val spawnTimer: Int,
         val health: Int,
@@ -14,37 +14,36 @@ class Creature(
         val levels: List<CreatureLevel>,
         val skins: List<Skin>
 ) {
-    var adBonus: AdBonus = AdBonus()
+    var adBoost: AdBoost = AdBoost()
     var storeBoost: StoreBoost = StoreBoost()
     val drop: Int
-        get() = calculateDrop()
-    val juice: Int
-        get() = calculateJuice()
+        get() = calculateCreatureDrop()
+    val juiceDrop: Int
+        get() = calculateCreatureJuiceDrop()
     val damage: Float
-        get() = calculateDamage()
+        get() = calculateCreatureDamage()
     val darkEnergy: Float
-        get() = calcuateDarkEnergy()
+        get() = calcuateCreatureDarkEnergy()
 
 
-    fun calculateDrop(): Int {
-        return levels[level - 1].drop + adBonus.dropBonus
+    fun calculateCreatureDrop(): Int {
+        return levels[level - 1].drop + adBoost.creatureDropBoost + storeBoost.bountyBoost
     }
 
-    fun calculateJuice(): Int {
-        return levels[level - 1].juice + adBonus.dropBonus + storeBoost.bountyBoost
+    fun calculateCreatureJuiceDrop(): Int {
+        return levels[level - 1].juice + adBoost.creatureDropBoost
     }
 
-    fun calculateDamage(): Float {
+    fun calculateCreatureDamage(): Float {
         return levels[level - 1].damage
     }
 
-    fun calcuateDarkEnergy(): Float {
+    fun calcuateCreatureDarkEnergy(): Float {
         return levels[level - 1].darkEnergy * storeBoost.doubleDarknessBoost
     }
 }
 
-
-@JsonClass(generateAdapter = true)
+@Serializable
 data class CreatureLevel(
         val level: Int,
         val juice: Int,

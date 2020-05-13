@@ -19,6 +19,38 @@
             </SchemaInfo>
           </value>
         </entry>
+        <entry key="creature_schema_revamp">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="creature_schema_revamp" />
+              <option name="relativePathToSchema" value="src/main/resources/creature_schema_revamp.json" />
+              <option name="schemaVersion" value="JSON Schema version 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/creatures_revamp.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="creature_schema_revamp2">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="creature_schema_revamp2" />
+              <option name="relativePathToSchema" value="src/main/resources/creatures_schema.json" />
+              <option name="schemaVersion" value="JSON Schema version 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/creatures_revamp2.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
       </map>
     </state>
   </component>

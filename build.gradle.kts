@@ -1,8 +1,6 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     kotlin("jvm") version "1.3.72"
-    kotlin("kapt") version "1.3.72"
+    kotlin("plugin.serialization") version "1.3.72"
 }
 
 group = "org.example"
@@ -15,8 +13,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation("com.squareup.moshi:moshi-kotlin:1.9.2")
-    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.9.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
 }
 
 tasks {

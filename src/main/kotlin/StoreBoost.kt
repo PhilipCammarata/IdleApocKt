@@ -1,7 +1,6 @@
-import com.squareup.moshi.JsonClass
+import kotlinx.serialization.Serializable
 
-
-@JsonClass(generateAdapter = true)
+@Serializable
 class StoreBoost(
     var doubleDarkness: Boolean = false,
     var bounty: Boolean = false
