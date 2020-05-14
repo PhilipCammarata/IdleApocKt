@@ -7,6 +7,6 @@ class StoreBoost(
 ) {
     val doubleDarknessBoost: Int
         get() = if (doubleDarkness) 2 else 0
-    val bountyBoost: Int
+    val creatureDropBoost: Int
         get() = if (bounty) 1 else 0
 }
