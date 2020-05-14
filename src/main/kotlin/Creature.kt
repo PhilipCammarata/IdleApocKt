@@ -13,9 +13,11 @@ class Creature(
         var level: Int = 1,
         val levels: List<CreatureLevel>,
         val skins: List<Skin>
+
 ) {
     var adBoost: AdBoost = AdBoost()
     var storeBoost: StoreBoost = StoreBoost()
+    var chantBoost: ChantBoost = ChantBoost()
     val drop: Int
         get() = calculateCreatureDrop()
     val juiceDrop: Int
@@ -27,7 +29,13 @@ class Creature(
 
 
     fun calculateCreatureDrop(): Int {
-        return levels[level - 1].drop + adBoost.creatureDropBoost + storeBoost.bountyBoost
+        val skinsCreatureDropBoost = skins.sumBy { it.creatureDropBoost }
+        println("level $level drop: ${levels[level -1].drop}")
+        println("chantDropBoost: ${chantBoost.creatureDropBoost}")
+        println("skinsDropBoost: $skinsCreatureDropBoost")
+        println("adBoost.creatureDropBoost: ${adBoost.creatureDropBoost}")
+        println("storeBoost.bountyBoost: ${storeBoost.bountyBoost}")
+        return levels[level - 1].drop + adBoost.creatureDropBoost + storeBoost.bountyBoost + skinsCreatureDropBoost + chantBoost.creatureDropBoost
     }
 
     fun calculateCreatureJuiceDrop(): Int {

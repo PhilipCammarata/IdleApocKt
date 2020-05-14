@@ -16,7 +16,7 @@ class Skin(
     fun calculateCreatureDrop(): Int {
         return when (quality) {
             Quality.Default -> 0
-            Quality.Rare -> 1
+            Quality.Rare -> if (level >= 1) 1 else 0
             Quality.Legendary -> if (level >= 3) 1 else 0
         }
     }

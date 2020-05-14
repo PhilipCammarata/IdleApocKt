@@ -12,8 +12,16 @@ fun main() {
     val gremlin = creatures.single { it.name == "Gremlin" }
     val adBoost = AdBoost(creatureDrop = true, creatureDamage = true, creatureDarkEnergy = true)
     val storeBoost = StoreBoost(doubleDarkness = true, bounty = true)
+    val chantBoost = ChantBoost(natureChantLevel = 4)
 
     gremlin.adBoost = adBoost
     gremlin.storeBoost = storeBoost
+    gremlin.chantBoost = chantBoost
 
+    gremlin.level = 4
+    gremlin.skins[0].level = 3
+    gremlin.skins[1].level = 4
+    gremlin.skins[2].level = 5
+
+    println("Level ${gremlin.level} ${gremlin.name} drops ${gremlin.drop} ${gremlin.dropType}")
 }
