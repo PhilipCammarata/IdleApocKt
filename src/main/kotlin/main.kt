@@ -14,7 +14,6 @@ fun main() {
     val scrollBoost = ScrollBoost(natureScroll = true, mightScroll = true, darkScroll = true)
     val towerBoost = TowerBoost(sunkenTower = true, graveyardTower = true, loveShackTower = true)
     val tokenBoost = TokenBoost(combatToken = 1425, darkEnergyToken = 1608)
-    tokenBoost.darkEnergyToken = 100
 
     val gremlin = creatures.single { it.name == "Gremlin" }
     gremlin.level = 4 // 4

@@ -56,6 +56,6 @@ class Creature(
     private fun calculateCreatureDarkEnergy(): Float {
         val baseDarkEnergy = levels[level - 1].darkEnergy
         val darkEnergyBoost = (tokenBoost.creatureDarkEnergyBoost / 100)
-        return baseDarkEnergy + (baseDarkEnergy * darkEnergyBoost)
+        return (baseDarkEnergy + (baseDarkEnergy * darkEnergyBoost)) * storeBoost.doubleDarknessBoost
     }
 }
