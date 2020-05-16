@@ -1,4 +1,5 @@
 import kotlinx.serialization.Serializable
+import sun.java2d.loops.GeneralRenderer
 
 @Serializable
 class Creature(
@@ -18,6 +19,7 @@ class Creature(
     var scrollBoost: ScrollBoost = ScrollBoost()
     var towerBoost: TowerBoost = TowerBoost()
     var tokenBoost: TokenBoost = TokenBoost()
+    var generatorBoost: GeneratorBoost = GeneratorBoost()
     val drop: Int
         get() = calculateCreatureDrop()
 
@@ -55,7 +57,7 @@ class Creature(
 
     private fun calculateCreatureDarkEnergy(): Float {
         val baseDarkEnergy = levels[level - 1].darkEnergy
-        val darkEnergyBoost = (tokenBoost.creatureDarkEnergyBoost / 100)
+        val darkEnergyBoost = (tokenBoost.creatureDarkEnergyBoost + generatorBoost.creatureDarkEnergyBoost) / 100
         return (baseDarkEnergy + (baseDarkEnergy * darkEnergyBoost)) * storeBoost.doubleDarknessBoost
     }
 }
