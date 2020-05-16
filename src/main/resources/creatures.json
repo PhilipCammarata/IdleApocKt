@@ -3,11 +3,9 @@
     "name": "Gremlin",
     "race": "Goblin",
     "floor": "Mud Farm",
-    "dropType": "Slime",
-    "juiceType": "Ooze",
-    "spawnOrder": 1,
+    "dropName": "Slime",
+    "juiceName": "Ooze",
     "spawnTimer": 5,
-    "health": 3,
     "levels": [
       {
         "level": 1,
@@ -54,25 +52,35 @@
     ]
   },
   {
-    "name": "Orc Mage",
-    "race": "Goblin",
-    "floor": "Mud Farm",
-    "dropType": "Cracked Orb",
-    "spawnOrder": 3,
-    "spawnTimer": 12,
-    "health": 5,
-    "levels": [],
-    "skins": []
-  },
-  {
-    "name": "Ogre",
-    "race": "Goblin",
-    "floor": "Mud Farm",
-    "dropType": "Ogre Hair",
-    "spawnOrder": 7,
-    "spawnTimer": 60,
-    "health": 8,
-    "levels": [],
-    "skins": []
+    "name": "Her",
+    "race": "Abomination",
+    "floor": "Laboratory",
+    "dropName": "Doll",
+    "spawnTimer": 1200,
+    "levels": [
+      {
+        "level": 1,
+        "drop": 1,
+        "damage": 200000,
+        "darkEnergy": 450000
+      },
+      {
+        "level": 2,
+        "drop": 2,
+        "damage": 250000,
+        "darkEnergy": 550000
+      }
+    ],
+    "skins": [
+      {
+        "name": "Default",
+        "quality": "Default"
+      },
+      {
+        "name": "She",
+        "quality": "Legendary"
+      }
+    ]
   }
 ]
+

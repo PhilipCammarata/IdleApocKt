@@ -8,6 +8,8 @@ class AdBoost(
 ) {
     val creatureDropBoost: Int
         get() = if (creatureDrop) 1 else 0
+    val creatureJuiceDropBoost: Int
+        get() = if (creatureDrop) 1 else 0
     val creatureDamageBoost: Float
         get() = if (creatureDamage) 100f else 0f
     val creatureDarkEnergyBoost: Float

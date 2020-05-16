@@ -6,22 +6,24 @@
   "type": "array",
   "items": {
     "type": "object",
+    "required": ["name", "race", "floor", "dropName", "spawnTimer", "levels", "skins"],
+    "additionalProperties": false,
     "properties": {
       "name": {"type": "string", "minLength": 1},
       "race": {"type": "string", "minLength": 1},
       "floor": {"type": "string", "minLength": 1},
-      "dropType": {"type": "string", "minLength": 1},
-      "juiceType": {"type": "string", "minLength": 1},
-      "spawnOrder": {"type": "number"},
+      "dropName": {"type": "string", "minLength": 1},
+      "juiceName": {"type": "string", "minLength": 1},
       "spawnTimer": {"type": "number"},
-      "health": {"type": "number"},
       "levels": {
         "type": "array",
         "items": {
+          "required": ["level", "drop", "damage", "darkEnergy"],
+          "additionalProperties": false,
           "properties": {
             "level": {"type": "number"},
-            "juice": {"type": "number"},
             "drop": {"type": "number"},
+            "juice": {"type": "number"},
             "damage": {"type": "number"},
             "darkEnergy": {"type": "number"}
           }
@@ -30,6 +32,8 @@
       "skins": {
         "type": "array",
         "items": {
+          "required": ["name", "quality"],
+          "additionalProperties": false,
           "properties": {
             "name": {"type": "string"},
             "quality": {"type": "string", "enum": ["Default", "Rare", "Legendary"]}

@@ -5,11 +5,9 @@ class Creature(
         val name: String,
         val race: String,
         val floor: String,
-        val dropType: String,
-        val juiceType: String? = null,
-        val spawnOrder: Int,
+        val dropName: String,
+        val juiceName: String? = null,
         val spawnTimer: Int,
-        val health: Int,
         var level: Int = 1,
         val levels: List<CreatureLevel>,
         val skins: List<Skin>
@@ -18,17 +16,20 @@ class Creature(
     var storeBoost: StoreBoost = StoreBoost()
     var chantBoost: ChantBoost = ChantBoost()
     var scrollBoost: ScrollBoost = ScrollBoost()
+    var towerBoost: TowerBoost = TowerBoost()
+    var tokenBoost: TokenBoost = TokenBoost()
     val drop: Int
         get() = calculateCreatureDrop()
-    val juiceDrop: Int
+
+    val juice: Int
         get() = calculateCreatureJuiceDrop()
     val damage: Float
         get() = calculateCreatureDamage()
     val darkEnergy: Float
-        get() = calcuateCreatureDarkEnergy()
+        get() = calculateCreatureDarkEnergy()
 
 
-    fun calculateCreatureDrop(): Int {
+    private fun calculateCreatureDrop(): Int {
         return listOf(
             levels[level - 1].drop,
             skins.sumBy { it.creatureDropBoost },
@@ -39,25 +40,22 @@ class Creature(
         ).sum()
     }
 
-    fun calculateCreatureJuiceDrop(): Int {
-        return levels[level - 1].juice + adBoost.creatureDropBoost
+    private fun calculateCreatureJuiceDrop(): Int {
+        val baseJuice = levels[level - 1].juice
+        return if (baseJuice == 0) {
+            0
+        } else {
+            baseJuice + adBoost.creatureJuiceDropBoost + towerBoost.creatureJuiceDropBoost
+        }
     }
 
-    fun calculateCreatureDamage(): Float {
+    private fun calculateCreatureDamage(): Float {
         return levels[level - 1].damage
     }
 
-    fun calcuateCreatureDarkEnergy(): Float {
-        return levels[level - 1].darkEnergy * storeBoost.doubleDarknessBoost
+    private fun calculateCreatureDarkEnergy(): Float {
+        val baseDarkEnergy = levels[level - 1].darkEnergy
+        val darkEnergyBoost = (tokenBoost.creatureDarkEnergyBoost / 100)
+        return baseDarkEnergy + (baseDarkEnergy * darkEnergyBoost)
     }
 }
-
-@Serializable
-data class CreatureLevel(
-        val level: Int,
-        val juice: Int,
-        val drop: Int,
-        val damage: Float,
-        val darkEnergy: Float
-)
-
